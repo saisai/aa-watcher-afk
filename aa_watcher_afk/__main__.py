@@ -1,7 +1,7 @@
 from aw_core.log import setup_logging
 
-from aw_watcher_afk.afk import AFKWatcher
-from aw_watcher_afk.config import parse_args
+from aa_watcher_afk.afk import AFKWatcher
+from aa_watcher_afk.config import parse_args
 
 
 def main() -> None:
@@ -9,7 +9,7 @@ def main() -> None:
 
     # Set up logging
     setup_logging(
-        "aw-watcher-afk",
+        "aa-watcher-afk",
         testing=args.testing,
         verbose=args.verbose,
         log_stderr=True,

@@ -8,11 +8,11 @@ test:
 	make typecheck
 
 typecheck:
-	poetry run mypy aw_watcher_afk --ignore-missing-imports
+	poetry run mypy aa_watcher_afk --ignore-missing-imports
 
 package:
 	pyinstaller aw-watcher-afk.spec --clean --noconfirm
 
 clean:
 	rm -rf build dist
-	rm -rf aw_watcher_afk/__pycache__
+	rm -rf aa_watcher_afk/__pycache__
