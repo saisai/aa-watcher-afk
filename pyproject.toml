@@ -1,16 +1,16 @@
 [tool.poetry]
-name = "aw-watcher-afk"
+name = "aa-watcher-afk"
 version = "0.2.0"
 description = "AFK watcher for ActivityWatch"
 authors = ["Erik Bjäreholt <erik@bjareho.lt>"]
 license = "MPL-2.0"
 
 [tool.poetry.scripts]
-aw-watcher-afk = "aa_watcher_afk:main"
+aa-watcher-afk = "aa_watcher_afk:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-aw-client = "^0.5.14"
+aa-client = "^0.5.14"
 pyobjc-framework-Quartz = { version = "*", platform = "darwin" }
 pynput = "*"
 

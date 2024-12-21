@@ -4,8 +4,8 @@ import platform
 from datetime import datetime, timedelta, timezone
 from time import sleep
 
-from aw_client import ActivityWatchClient
-from aw_core.models import Event
+from aa_client import ActivityWatchClient
+from aa_core.models import Event
 
 from .config import load_config
 
@@ -46,7 +46,7 @@ class AFKWatcher:
         )
 
         self.client = ActivityWatchClient(
-            "aw-watcher-afk", host=args.host, port=args.port, testing=testing
+            "aa-watcher-afk", host=args.host, port=args.port, testing=testing
         )
         self.bucketname = "{}_{}".format(
             self.client.client_name, self.client.client_hostname
@@ -59,7 +59,7 @@ class AFKWatcher:
         self.client.heartbeat(self.bucketname, e, pulsetime=pulsetime, queued=True)
 
     def run(self):
-        logger.info("aw-watcher-afk started")
+        logger.info("aa-watcher-afk started")
 
         # Initialization
         self.client.wait_for_server()
@@ -119,5 +119,5 @@ class AFKWatcher:
                 sleep(self.settings.poll_time)
 
             except KeyboardInterrupt:
-                logger.info("aw-watcher-afk stopped by keyboard interrupt")
+                logger.info("aa-watcher-afk stopped by keyboard interrupt")
                 break

@@ -1,4 +1,4 @@
-from aw_core.log import setup_logging
+from aa_core.log import setup_logging
 
 from aa_watcher_afk.afk import AFKWatcher
 from aa_watcher_afk.config import parse_args
